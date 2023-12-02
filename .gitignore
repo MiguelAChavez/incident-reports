@@ -5,6 +5,9 @@ pom.xml.versionsBackup
 pom.xml.next
 /data
 /data/*
+.m2/*
+.mvn/*
+.env
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
