@@ -7,7 +7,7 @@ pom.xml.next
 /data/*
 .m2/*
 .mvn/*
-.env
+.idea
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
