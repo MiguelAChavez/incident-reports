@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  java_db:
+    image: mysql:5.7
+    restart: unless-stopped
+    container_name: java_db
+    env_file: ./.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQLDB_DATABASE
+    ports:
+      - 3308:3306
+    volumes:
+      - db:/var/lib/mysql
+  java_app:
+    depends_on:
+      - java_db
+    container_name: incidentReport
+    image: incident_report_app
+    build: ./src
+    restart: on-failure
+    env_file: ./.env
+    ports:
+      - 6868:8080
+    environment:
+      SPRING_APPLICATION_JSON: '{
+        "spring.datasource.url" : "jdbc:mysql://java_db:3306/$MYSQLDB_DATABASE?useSSL=false&allowPublicKeyRetrieval=true",
+        "spring.datasource.username" : "$MYSQLDB_USER",
+        "spring.datasource.password" : "$MYSQLDB_ROOT_PASSWORD",
+        "spring.jpa.database-platform" : "org.hibernate.dialect.MySQL5InnoDBDialect",
+        "spring.jpa.hibernate.ddl-auto" : "update"
+      }'
+    volumes:
+      - .m2:/root/.m2
+    stdin_open: true
+    tty: true
+
+volumes:
+  db:
