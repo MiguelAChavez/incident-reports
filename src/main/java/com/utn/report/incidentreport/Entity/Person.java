@@ -29,14 +29,13 @@ public class Person implements Serializable {
     protected String lastName;
 
     @Column(nullable = false, name = "dni")
-    @NotBlank(message = "DNI is required")
-    @Size(min = 7, max = 8, message = "DNI must be between 7 and 8 characters")
     protected int dni;
 
     public Person(String name, String lastName, int dni) {
         this.name = name;
         this.lastName = lastName;
         this.dni = dni;
+        System.out.println("Person constructor");
     }
 
 }

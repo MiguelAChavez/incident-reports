@@ -45,12 +45,12 @@ public class TechnicalServiceImp implements PersonServices<Technical> {
 
     @Override
     public Optional<Technical> findById(Long id) {
-        return Optional.empty();
+        return technicalRepository.findById(id);
     }
 
     @Override
     public Optional<Technical> findByDni(int dni) {
-        return Optional.empty();
+        return technicalRepository.findByDni(dni);
     }
 
 }
