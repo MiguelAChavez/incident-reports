@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>jaxb-api-parent</artifactId>
         <groupId>javax.xml.bind</groupId>
@@ -45,7 +46,7 @@
                             <requireMavenVersion>
                                 <version>[3.0.3,)</version>
                             </requireMavenVersion>
-                            <DependencyConvergence />
+                            <DependencyConvergence/>
                         </rules>
                     </configuration>
                 </plugin>
@@ -105,7 +106,8 @@
                             <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
                             <manifestEntries>
                                 <Extension-Name>javax.xml.bind</Extension-Name>
-                                <Implementation-Build-Id>${scmBranch}-${buildNumber}, ${timestamp}</Implementation-Build-Id>
+                                <Implementation-Build-Id>${scmBranch}-${buildNumber}, ${timestamp}
+                                </Implementation-Build-Id>
                                 <Multi-Release>true</Multi-Release>
                             </manifestEntries>
                             <manifest>
@@ -430,8 +432,10 @@ href='http://jaxb.java.net'><i>http://jaxb.java.net</i></a>
                                 <phase>compile</phase>
                                 <configuration>
                                     <tasks>
-                                        <mkdir dir="${project.build.outputDirectory}/META-INF/versions/9" />
-                                        <javac srcdir="${mrjar.sourceDirectory}" destdir="${project.build.outputDirectory}/META-INF/versions/9" classpath="${project.build.outputDirectory}" includeantruntime="false" />
+                                        <mkdir dir="${project.build.outputDirectory}/META-INF/versions/9"/>
+                                        <javac srcdir="${mrjar.sourceDirectory}"
+                                               destdir="${project.build.outputDirectory}/META-INF/versions/9"
+                                               classpath="${project.build.outputDirectory}" includeantruntime="false"/>
                                     </tasks>
                                 </configuration>
                                 <goals>
@@ -443,8 +447,9 @@ href='http://jaxb.java.net'><i>http://jaxb.java.net</i></a>
                                 <phase>verify</phase>
                                 <configuration>
                                     <tasks>
-                                        <jar destfile="${project.build.directory}/jaxb-api-${project.version}-sources.jar" update="true">
-                                            <fileset dir="${project.build.directory}/mr-jar/" />
+                                        <jar destfile="${project.build.directory}/jaxb-api-${project.version}-sources.jar"
+                                             update="true">
+                                            <fileset dir="${project.build.directory}/mr-jar/"/>
                                         </jar>
                                     </tasks>
                                 </configuration>

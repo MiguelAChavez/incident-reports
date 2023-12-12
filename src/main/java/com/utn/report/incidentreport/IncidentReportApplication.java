@@ -7,9 +7,8 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages = "com.utn.report.incidentreport")
 public class IncidentReportApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(IncidentReportApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(IncidentReportApplication.class, args);
+    }
 
 }

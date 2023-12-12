@@ -1,16 +1,17 @@
-package com.utn.report.incidentreport.models;
+package com.utn.report.incidentreport.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
+
 import java.io.Serializable;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @MappedSuperclass
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Person implements Serializable {
 
     @Id
@@ -36,6 +37,5 @@ public class Person implements Serializable {
         this.lastName = lastName;
         this.dni = dni;
     }
-
 
 }

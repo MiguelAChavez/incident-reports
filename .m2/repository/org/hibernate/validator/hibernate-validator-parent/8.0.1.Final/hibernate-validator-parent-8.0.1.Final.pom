@@ -5,7 +5,8 @@
   ~ License: Apache License, Version 2.0
   ~ See the license.txt file in the root directory or <http://www.apache.org/licenses/LICENSE-2.0>.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.hibernate.validator</groupId>
@@ -101,7 +102,8 @@
 
         <!-- URLs used in javadoc and documentation generation -->
 
-        <bv.spec.url>https://jakarta.ee/specifications/bean-validation/3.0/jakarta-bean-validation-spec-3.0.html</bv.spec.url>
+        <bv.spec.url>https://jakarta.ee/specifications/bean-validation/3.0/jakarta-bean-validation-spec-3.0.html
+        </bv.spec.url>
         <java.api-docs.base-url>https://docs.oracle.com/en/java/javase/11/docs/api</java.api-docs.base-url>
         <java.technotes.base-url>http://docs.oracle.com/javase/8/docs/technotes</java.technotes.base-url>
         <javaee.api-docs.base-url>https://jakarta.ee/specifications/platform/9/apidocs</javaee.api-docs.base-url>
@@ -178,9 +180,12 @@
         <version.org.codehaus.groovy>2.4.12</version.org.codehaus.groovy>
         <version.com.google.guava>31.1-jre</version.com.google.guava>
         <version.org.springframework.spring-expression>5.3.22</version.org.springframework.spring-expression>
-        <version.org.jboss.arquillian.container.arquillian-weld-embedded>3.0.2.Final</version.org.jboss.arquillian.container.arquillian-weld-embedded>
-        <version.com.fasterxml.jackson.core.jackson-databind>2.13.2.2</version.com.fasterxml.jackson.core.jackson-databind>
-        <version.com.fasterxml.jackson.core.jackson-annotations>2.13.2</version.com.fasterxml.jackson.core.jackson-annotations>
+        <version.org.jboss.arquillian.container.arquillian-weld-embedded>3.0.2.Final
+        </version.org.jboss.arquillian.container.arquillian-weld-embedded>
+        <version.com.fasterxml.jackson.core.jackson-databind>2.13.2.2
+        </version.com.fasterxml.jackson.core.jackson-databind>
+        <version.com.fasterxml.jackson.core.jackson-annotations>2.13.2
+        </version.com.fasterxml.jackson.core.jackson-annotations>
         <version.net.bytebuddy.byte-buddy>1.13.0</version.net.bytebuddy.byte-buddy>
 
         <!-- OSGi dependencies -->
@@ -203,8 +208,10 @@
         <!-- Asciidoctor -->
 
         <version.asciidoctor.plugin>2.2.2</version.asciidoctor.plugin>
-        <version.org.hibernate.infra.hibernate-asciidoctor-theme>1.0.6.Final</version.org.hibernate.infra.hibernate-asciidoctor-theme>
-        <version.org.hibernate.infra.hibernate-asciidoctor-extensions>2.0.0.Final</version.org.hibernate.infra.hibernate-asciidoctor-extensions>
+        <version.org.hibernate.infra.hibernate-asciidoctor-theme>1.0.6.Final
+        </version.org.hibernate.infra.hibernate-asciidoctor-theme>
+        <version.org.hibernate.infra.hibernate-asciidoctor-extensions>2.0.0.Final
+        </version.org.hibernate.infra.hibernate-asciidoctor-extensions>
         <version.org.jruby>9.3.2.0</version.org.jruby>
         <version.org.asciidoctor.asciidoctorj>2.5.3</version.org.asciidoctor.asciidoctorj>
         <version.org.asciidoctor.asciidoctorj-pdf>1.5.0-alpha.18</version.org.asciidoctor.asciidoctorj-pdf>
@@ -280,9 +287,11 @@
         <java-version.test.compiler.java_home>${java.home}</java-version.test.compiler.java_home>
         <java-version.test.compiler>${java-version.test.compiler.java_home}/bin/javac</java-version.test.compiler>
         <!-- IMPORTANT: For Java 8, this must be the path to the JDK, not to the JRE -->
-        <java-version.test.launcher.java_home>${java-version.test.compiler.java_home}</java-version.test.launcher.java_home>
+        <java-version.test.launcher.java_home>${java-version.test.compiler.java_home}
+        </java-version.test.launcher.java_home>
         <java-version.test.launcher>${java-version.test.launcher.java_home}/bin/java</java-version.test.launcher>
-        <java-version.test.java17.add-test-source-phase>generate-test-sources</java-version.test.java17.add-test-source-phase>
+        <java-version.test.java17.add-test-source-phase>generate-test-sources
+        </java-version.test.java17.add-test-source-phase>
 
         <!-- No need to build the javadocs per module. Aggregated javadocs are build in the distribution module. See also HV-894 -->
         <maven.javadoc.skip>true</maven.javadoc.skip>
@@ -310,8 +319,14 @@
         <surefire.jvm.args.shrinkwrap>
             -Dmaven.repo.local=${settings.localRepository}
         </surefire.jvm.args.shrinkwrap>
-        <surefire.jvm.args>${surefire.jvm.args.additional} ${surefire.jvm.args.add-opens} ${surefire.jvm.args.illegal-access} ${surefire.jvm.args.shrinkwrap} ${surefire.jvm.args.java-version} ${surefire.jvm.args.commandline}</surefire.jvm.args>
-        <failsafe.jvm.args>${surefire.jvm.args.additional} ${surefire.jvm.args.add-opens} ${surefire.jvm.args.illegal-access} ${surefire.jvm.args.shrinkwrap} ${surefire.jvm.args.java-version} ${surefire.jvm.args.commandline}</failsafe.jvm.args>
+        <surefire.jvm.args>${surefire.jvm.args.additional} ${surefire.jvm.args.add-opens}
+            ${surefire.jvm.args.illegal-access} ${surefire.jvm.args.shrinkwrap} ${surefire.jvm.args.java-version}
+            ${surefire.jvm.args.commandline}
+        </surefire.jvm.args>
+        <failsafe.jvm.args>${surefire.jvm.args.additional} ${surefire.jvm.args.add-opens}
+            ${surefire.jvm.args.illegal-access} ${surefire.jvm.args.shrinkwrap} ${surefire.jvm.args.java-version}
+            ${surefire.jvm.args.commandline}
+        </failsafe.jvm.args>
 
         <!--
             Should be set from the command line.
@@ -322,7 +337,9 @@
 
         <arquillian.wildfly.jvm.args.add-opens></arquillian.wildfly.jvm.args.add-opens>
         <arquillian.wildfly.jvm.args.add-modules></arquillian.wildfly.jvm.args.add-modules>
-        <arquillian.wildfly.jvm.args>-Duser.language=en ${arquillian.wildfly.jvm.args.add-opens} ${arquillian.wildfly.jvm.args.add-modules}</arquillian.wildfly.jvm.args>
+        <arquillian.wildfly.jvm.args>-Duser.language=en ${arquillian.wildfly.jvm.args.add-opens}
+            ${arquillian.wildfly.jvm.args.add-modules}
+        </arquillian.wildfly.jvm.args>
 
         <!-- JDK version required for the build -->
         <jdk.min.version>17</jdk.min.version>
@@ -618,7 +635,8 @@
                                         <exclude>javax.validation:validation-api</exclude>
                                         <exclude>org.glassfish:javax.el</exclude>
                                         <exclude>javax.annotation:javax.annotation-api</exclude>
-                                        <exclude>org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.2_spec</exclude>
+                                        <exclude>org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.2_spec
+                                        </exclude>
                                         <exclude>javax.enterprise:cdi-api</exclude>
                                         <exclude>javax.persistence:javax.persistence-api</exclude>
                                     </excludes>
@@ -844,11 +862,16 @@
                     <artifactId>license-maven-plugin</artifactId>
                     <version>${version.license.plugin}</version>
                     <configuration>
-                        <header>${hibernate-validator-parent.path}/build-config/src/main/resources/license.header</header>
+                        <header>${hibernate-validator-parent.path}/build-config/src/main/resources/license.header
+                        </header>
                         <strictCheck>true</strictCheck>
                         <headerDefinitions>
-                            <headerDefinition>${hibernate-validator-parent.path}/build-config/src/main/resources/java-header-style.xml</headerDefinition>
-                            <headerDefinition>${hibernate-validator-parent.path}/build-config/src/main/resources/xml-header-style.xml</headerDefinition>
+                            <headerDefinition>
+                                ${hibernate-validator-parent.path}/build-config/src/main/resources/java-header-style.xml
+                            </headerDefinition>
+                            <headerDefinition>
+                                ${hibernate-validator-parent.path}/build-config/src/main/resources/xml-header-style.xml
+                            </headerDefinition>
                         </headerDefinitions>
                         <mapping>
                             <java>JAVA_CLASS_STYLE</java>
@@ -989,7 +1012,7 @@
                             <artifactId>jruby-complete</artifactId>
                             <version>${version.org.jruby}</version>
                         </dependency>
-                         <dependency>
+                        <dependency>
                             <groupId>org.asciidoctor</groupId>
                             <artifactId>asciidoctorj</artifactId>
                             <version>${version.org.asciidoctor.asciidoctorj}</version>
@@ -1096,7 +1119,9 @@
                         <skip>true</skip>
                         <newVersion>
                             <file>
-                                <path>${project.build.directory}/${project.artifactId}-${project.version}.${project.packaging}</path>
+                                <path>
+                                    ${project.build.directory}/${project.artifactId}-${project.version}.${project.packaging}
+                                </path>
                             </file>
                         </newVersion>
                         <parameter>
@@ -1175,7 +1200,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -1194,7 +1219,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -1213,7 +1238,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -1226,7 +1251,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -1241,7 +1266,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                             </pluginExecutions>
@@ -1336,7 +1361,7 @@
                                 </goals>
                                 <configuration>
                                     <rules>
-                                        <requireReleaseDeps />
+                                        <requireReleaseDeps/>
                                         <requireJavaVersion>
                                             <version>[17,18)</version>
                                         </requireJavaVersion>

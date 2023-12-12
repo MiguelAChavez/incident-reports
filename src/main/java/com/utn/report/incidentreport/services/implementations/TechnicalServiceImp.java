@@ -1,41 +1,49 @@
-package com.utn.report.incidentreport.Services.Implementations;
+package com.utn.report.incidentreport.services.implementations;
 
-import com.utn.report.incidentreport.Entity.Technical;
-import com.utn.report.incidentreport.Repository.UserRepository;
-import com.utn.report.incidentreport.Services.Interfaces.PersonServices;
+import com.utn.report.incidentreport.entity.Technical;
+import com.utn.report.incidentreport.exceptions.TechnicalValidationException;
+import com.utn.report.incidentreport.repository.UserRepository;
+import com.utn.report.incidentreport.services.interfaces.PersonServices;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class TechnicalServiceImp implements PersonServices<Technical> {
+    private final UserRepository technicalRepository;
 
     @Autowired
-    private UserRepository technicalRepository;
+    public TechnicalServiceImp(UserRepository technicalRepository) {
+        this.technicalRepository = technicalRepository;
+    }
 
     @Override
     public Boolean add(Technical technical) {
-        boolean exist = false;
         try {
-            technicalRepository.save(technical);
-            exist = true;
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println(e.getMessage());
+            var t = technicalRepository.save(technical);
+            log.info(t.toString());
+            return true;
+        } catch (TechnicalValidationException e) {
+            throw new TechnicalValidationException(HttpStatus.BAD_REQUEST, "Technical already exists");
         }
-        return exist;
     }
 
     @Override
     public Boolean update(Technical technical) {
-        return null;
+        return false;
     }
 
     @Override
     public void delete(Long id) {
-
+        if (id == null || id <= 0) {
+            throw new TechnicalValidationException(HttpStatus.BAD_REQUEST, "Technical id can't be null or less than 0");
+        }
+        technicalRepository.deleteById(id);
     }
 
     @Override

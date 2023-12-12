@@ -39,7 +39,8 @@
 
         <angus-activation.javadoc.source>11</angus-activation.javadoc.source>
         <angus-activation.javadoc.title>Angus Activation API documentation</angus-activation.javadoc.title>
-        <angus-activation.javadoc.header><![CDATA[<br>Angus Activation v${angus-activation.version}]]></angus-activation.javadoc.header>
+        <angus-activation.javadoc.header>
+            <![CDATA[<br>Angus Activation v${angus-activation.version}]]></angus-activation.javadoc.header>
         <angus-activation.javadoc.bottom><![CDATA[
 Comments to: <a href="mailto:angus-dev@eclipse.org">angus-dev@eclipse.org</a>.<br>
 Copyright &#169; 2019, ${current.year} Eclipse Foundation. All rights reserved.]]></angus-activation.javadoc.bottom>

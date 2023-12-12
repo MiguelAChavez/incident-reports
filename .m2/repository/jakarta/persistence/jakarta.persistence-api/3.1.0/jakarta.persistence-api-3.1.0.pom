@@ -13,7 +13,8 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -282,7 +283,8 @@
                 <configuration>
                     <niceManifest>true</niceManifest>
                     <instructions>
-                        <Bundle-Description>Jakarta Persistence ${spec.specification.version} API jar</Bundle-Description>
+                        <Bundle-Description>Jakarta Persistence ${spec.specification.version} API jar
+                        </Bundle-Description>
                         <Bundle-Name>Jakarta Persistence API jar</Bundle-Name>
                         <Bundle-SymbolicName>${spec.bundle.symbolic-name}</Bundle-SymbolicName>
                         <Bundle-Version>${spec.bundle.version}</Bundle-Version>

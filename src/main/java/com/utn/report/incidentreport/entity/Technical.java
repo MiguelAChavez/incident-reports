@@ -1,4 +1,4 @@
-package com.utn.report.incidentreport.models;
+package com.utn.report.incidentreport.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,16 +8,16 @@ import lombok.*;
 @AttributeOverride(name = "id", column = @Column(name = "technical_id"))
 @Getter
 @Setter
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class Technical extends Person {
 
     @Column(nullable = false, name = "matriculation")
     private String matriculation;
-
-    /*@OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ability_id", referencedColumnName = "ability_id")
-    private List<Ability> Skills;
+/*
+    @OneToMany(mappedBy = "technical", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Skill> skills;
 */
 
     public Technical(String name, String lastName, int dni, String matriculation) {

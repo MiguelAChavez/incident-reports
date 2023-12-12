@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 
     <modelVersion>4.0.0</modelVersion>
@@ -10,32 +11,32 @@
     <name>Fabric8 :: Kubernetes :: Bom</name>
     <packaging>pom</packaging>
     <description>Generated Bom</description>
-    
-        <url>http://fabric8.io/</url>    
-        <licenses>
-            <license>
-                <name>Apache License, Version 2.0</name>
-                <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-                <distribution>repo</distribution>
-            </license>
-        </licenses>
-    
-    
-        <scm>
-            <connection>scm:git:git@github.com:fabric8io/kubernetes-client.git</connection>
-            <developerConnection>scm:git:git@github.com:fabric8io/kubernetes-client.git</developerConnection>
-            <url>http://github.com/fabric8io/kubernetes-client/</url>
-            <tag>5.12.4</tag>
-        </scm>
-    
-            <developers>
-            <developer>
-                <id>geeks</id>
-                <name>Fabric8 Development Team</name>
-                <organization>fabric8</organization>
-                <organizationUrl>http://fabric8.io/</organizationUrl>
-            </developer>
-        </developers>
+
+    <url>http://fabric8.io/</url>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+
+    <scm>
+        <connection>scm:git:git@github.com:fabric8io/kubernetes-client.git</connection>
+        <developerConnection>scm:git:git@github.com:fabric8io/kubernetes-client.git</developerConnection>
+        <url>http://github.com/fabric8io/kubernetes-client/</url>
+        <tag>5.12.4</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>geeks</id>
+            <name>Fabric8 Development Team</name>
+            <organization>fabric8</organization>
+            <organizationUrl>http://fabric8.io/</organizationUrl>
+        </developer>
+    </developers>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -625,12 +626,12 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
-        <build>
-            <pluginManagement>
-                <plugins>
-                </plugins>
-            </pluginManagement>
-        </build>
-    
+
+    <build>
+        <pluginManagement>
+            <plugins>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 </project>

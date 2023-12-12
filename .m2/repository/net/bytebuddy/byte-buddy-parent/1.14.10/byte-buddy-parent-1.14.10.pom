@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.bytebuddy</groupId>
@@ -120,7 +121,7 @@
         <modulemaker.skip>false</modulemaker.skip>
         <javadoc.download.skip>false</javadoc.download.skip>
         <repository.url>git@github.com:raphw/byte-buddy.git</repository.url>
-        <surefire.arguments />
+        <surefire.arguments/>
     </properties>
 
     <licenses>
@@ -569,7 +570,7 @@
                 <jdk>9</jdk>
             </activation>
             <properties>
-                <project.build.outputTimestamp />
+                <project.build.outputTimestamp/>
                 <sourcecode.main.version>1.6</sourcecode.main.version>
                 <sourcecode.test.version>1.6</sourcecode.test.version>
                 <bytecode.main.version>1.6</bytecode.main.version>
@@ -1188,7 +1189,9 @@
                                     <skip>${japicmp.skip}</skip>
                                     <newVersion>
                                         <file>
-                                            <path>${project.build.directory}/${project.artifactId}-${project.version}.jar</path>
+                                            <path>
+                                                ${project.build.directory}/${project.artifactId}-${project.version}.jar
+                                            </path>
                                         </file>
                                     </newVersion>
                                     <parameter>
@@ -1199,8 +1202,11 @@
                                         <breakBuildBasedOnSemanticVersioning>true</breakBuildBasedOnSemanticVersioning>
                                         <excludes>
                                             <exclude>net.bytebuddy.asm.MemberSubstitution$Replacement$Binding</exclude>
-                                            <exclude>net.bytebuddy.asm.MemberSubstitution$Replacement$ForElementMatchers</exclude>
-                                            <exclude>net.bytebuddy.asm.MemberSubstitution$Replacement$ForFirstBinding</exclude>
+                                            <exclude>
+                                                net.bytebuddy.asm.MemberSubstitution$Replacement$ForElementMatchers
+                                            </exclude>
+                                            <exclude>net.bytebuddy.asm.MemberSubstitution$Replacement$ForFirstBinding
+                                            </exclude>
                                             <exclude>net.bytebuddy.asm.MemberSubstitution$Replacement$NoOp</exclude>
                                         </excludes>
                                     </parameter>
@@ -1233,7 +1239,8 @@
                                 </goals>
                                 <configuration>
                                     <target>
-                                        <echo level="info" message="Checksum collection is enabled (only if using mvnw)." />
+                                        <echo level="info"
+                                              message="Checksum collection is enabled (only if using mvnw)."/>
                                     </target>
                                 </configuration>
                             </execution>
@@ -1264,7 +1271,8 @@
                                 </goals>
                                 <configuration>
                                     <target>
-                                        <echo level="info" message="Checksum enforcement is enabled (only if using mvnw)." />
+                                        <echo level="info"
+                                              message="Checksum enforcement is enabled (only if using mvnw)."/>
                                     </target>
                                 </configuration>
                             </execution>

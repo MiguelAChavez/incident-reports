@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.yaml</groupId>
     <artifactId>snakeyaml</artifactId>
@@ -159,7 +160,7 @@
                     <configuration>
                         <environmentVariables>
                             <EnvironmentKey1>EnvironmentValue1</EnvironmentKey1>
-                            <EnvironmentEmpty />
+                            <EnvironmentEmpty/>
                         </environmentVariables>
                     </configuration>
                 </plugin>
@@ -195,14 +196,16 @@
                 <executions>
                     <execution>
                         <id>module-info-compile</id>
-                        <goals><goal>compile</goal></goals>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
                         <configuration>
                             <release>9</release>
                             <compileSourceRoots>${project.basedir}/src/main/java9</compileSourceRoots>
                             <multiReleaseOutput>true</multiReleaseOutput>
-                              <jdkToolchain>
+                            <jdkToolchain>
                                 <version>[11,)</version>
-                              </jdkToolchain>
+                            </jdkToolchain>
                         </configuration>
                     </execution>
                 </executions>

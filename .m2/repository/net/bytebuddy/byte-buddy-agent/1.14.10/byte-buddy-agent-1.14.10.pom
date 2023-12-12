@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -18,11 +19,12 @@
         <packages.list>net.bytebuddy.agent,net.bytebuddy.agent.utility.nullability</packages.list>
         <native.compiler.32>i686-w64-mingw32-gcc</native.compiler.32>
         <native.compiler.64>x86_64-w64-mingw32-gcc</native.compiler.64>
-        <net.bytebuddy.test.jnapath />
+        <net.bytebuddy.test.jnapath/>
     </properties>
 
     <name>Byte Buddy agent</name>
-    <description>The Byte Buddy agent offers convenience for attaching an agent to the local or a remote VM.</description>
+    <description>The Byte Buddy agent offers convenience for attaching an agent to the local or a remote VM.
+    </description>
 
     <!--
       The JNA dependency can be excluded safely. Byte Buddy will safely discover the
@@ -201,7 +203,9 @@
                                     <arguments>
                                         <argument>-shared</argument>
                                         <argument>-o</argument>
-                                        <argument>${project.basedir}/src/main/resources/win32-x86/attach_hotspot_windows.dll</argument>
+                                        <argument>
+                                            ${project.basedir}/src/main/resources/win32-x86/attach_hotspot_windows.dll
+                                        </argument>
                                         <argument>${project.basedir}/src/main/c/attach_hotspot_windows.c</argument>
                                     </arguments>
                                 </configuration>
@@ -217,7 +221,9 @@
                                     <arguments>
                                         <argument>-shared</argument>
                                         <argument>-o</argument>
-                                        <argument>${project.basedir}/src/main/resources/win32-x86-64/attach_hotspot_windows.dll</argument>
+                                        <argument>
+                                            ${project.basedir}/src/main/resources/win32-x86-64/attach_hotspot_windows.dll
+                                        </argument>
                                         <argument>${project.basedir}/src/main/c/attach_hotspot_windows.c</argument>
                                     </arguments>
                                 </configuration>

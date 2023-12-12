@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 
     <modelVersion>4.0.0</modelVersion>
@@ -10,33 +11,33 @@
     <name>REST Assured: BOM</name>
     <packaging>pom</packaging>
     <description>Centralized dependencyManagement for the Rest Assured Project</description>
-    
-        <url>https://rest-assured.io/</url>    
-        <licenses>
-            <license>
-                <name>Apache 2.0</name>
-                <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
-                <distribution>repo</distribution>
-            </license>
-        </licenses>
-    
-    
-        <scm>
-            <connection>scm:git:git://github.com/rest-assured/rest-assured.git</connection>
-            <developerConnection>scm:git:ssh://git@github.com/rest-assured/rest-assured.git</developerConnection>
-            <url>http://github.com/rest-assured/rest-assured/tree/master</url>
-            <tag>HEAD</tag>
-        </scm>
-    
-            <developers>
-            <developer>
-                <id>johan.haleby</id>
-                <name>Johan Haleby</name>
-                <email>johan.haleby at gmail.com</email>
-                <organization>Jayway</organization>
-                <organizationUrl>http://www.jayway.com</organizationUrl>
-            </developer>
-        </developers>
+
+    <url>https://rest-assured.io/</url>
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+
+    <scm>
+        <connection>scm:git:git://github.com/rest-assured/rest-assured.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/rest-assured/rest-assured.git</developerConnection>
+        <url>http://github.com/rest-assured/rest-assured/tree/master</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>johan.haleby</id>
+            <name>Johan Haleby</name>
+            <email>johan.haleby at gmail.com</email>
+            <organization>Jayway</organization>
+            <organizationUrl>http://www.jayway.com</organizationUrl>
+        </developer>
+    </developers>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -101,12 +102,12 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
-        <build>
-            <pluginManagement>
-                <plugins>
-                </plugins>
-            </pluginManagement>
-        </build>
-    
+
+    <build>
+        <pluginManagement>
+            <plugins>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 </project>

@@ -98,9 +98,12 @@
 
     <properties>
         <sonatypeOssDistMgmtNexusUrl>https://jakarta.oss.sonatype.org/</sonatypeOssDistMgmtNexusUrl>
-        <sonatypeOssDistMgmtSnapshotsUrl>${sonatypeOssDistMgmtNexusUrl}content/repositories/snapshots/</sonatypeOssDistMgmtSnapshotsUrl>
-        <sonatypeOssDistMgmtStagingUrl>${sonatypeOssDistMgmtNexusUrl}content/repositories/staging/</sonatypeOssDistMgmtStagingUrl>
-        <sonatypeOssDistMgmtReleasesUrl>${sonatypeOssDistMgmtNexusUrl}service/local/staging/deploy/maven2/</sonatypeOssDistMgmtReleasesUrl>
+        <sonatypeOssDistMgmtSnapshotsUrl>${sonatypeOssDistMgmtNexusUrl}content/repositories/snapshots/
+        </sonatypeOssDistMgmtSnapshotsUrl>
+        <sonatypeOssDistMgmtStagingUrl>${sonatypeOssDistMgmtNexusUrl}content/repositories/staging/
+        </sonatypeOssDistMgmtStagingUrl>
+        <sonatypeOssDistMgmtReleasesUrl>${sonatypeOssDistMgmtNexusUrl}service/local/staging/deploy/maven2/
+        </sonatypeOssDistMgmtReleasesUrl>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!--
           Initialize release.arguments to empty, otherwise if not defined
@@ -196,7 +199,8 @@
                                         <requireMavenVersion>
                                             <version>[3.0.4,)</version>
                                             <message>Maven 3.0 through 3.0.3 inclusive does not pass
-                                                correct settings.xml to Maven Release Plugin.</message>
+                                                correct settings.xml to Maven Release Plugin.
+                                            </message>
                                         </requireMavenVersion>
                                     </rules>
                                 </configuration>

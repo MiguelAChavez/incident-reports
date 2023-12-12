@@ -1,4 +1,5 @@
-<project xsi:schemaLocation='http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd' xmlns='http://maven.apache.org/POM/4.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+<project xsi:schemaLocation='http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd'
+         xmlns='http://maven.apache.org/POM/4.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.glassfish.web</groupId>
     <artifactId>el</artifactId>
@@ -14,50 +15,50 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                    <configuration>
-                        <source>1.5</source>
-                        <target>1.5</target>
-                    </configuration>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version> 2.1 </version>
+                <version>2.1</version>
                 <configuration>
                     <includePom>true</includePom>
                 </configuration>
                 <executions>
                     <execution>
-                       <id>attach-sources</id>
-                       <goals>
-                           <goal>jar-no-fork</goal> 
-                       </goals>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
             <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-javadoc-plugin</artifactId>
-              <executions>
-                  <execution>
-                      <id>attach-javadocs</id>
-                      <goals>
-                          <goal>jar</goal>
-                      </goals>
-                 </execution>
-              </executions>
-           </plugin>
-           <plugin>
-              <groupId>org.codehaus.mojo</groupId>
-              <artifactId>findbugs-maven-plugin</artifactId>
-              <version>2.1</version>
-              <configuration>
-                  <threshold>High</threshold>
-                  <excludeFilterFile>${findbugs.exclude}</excludeFilterFile>
-                  <findbugsXmlOutput>true</findbugsXmlOutput>
-                  <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
-              </configuration>
-           </plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <threshold>High</threshold>
+                    <excludeFilterFile>${findbugs.exclude}</excludeFilterFile>
+                    <findbugsXmlOutput>true</findbugsXmlOutput>
+                    <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+                </configuration>
+            </plugin>
         </plugins>
         <extensions>
             <extension>
@@ -88,11 +89,11 @@
     </scm>
 
     <repositories>
-        
-        
+
+
     </repositories>
     <pluginRepositories>
-        
+
     </pluginRepositories>
     <distributionManagement>
         <site>

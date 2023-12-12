@@ -13,13 +13,16 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.minidev</groupId>
     <artifactId>accessors-smart</artifactId>
     <version>2.5.0</version>
     <name>ASM based accessors helper used by json-smart</name>
-    <description>Java reflect give poor performance on getter setter an constructor calls, accessors-smart use ASM to speed up those calls.</description>
+    <description>Java reflect give poor performance on getter setter an constructor calls, accessors-smart use ASM to
+        speed up those calls.
+    </description>
     <packaging>bundle</packaging>
     <url>https://urielch.github.io/</url>
     <organization>
@@ -69,7 +72,7 @@ limitations under the License.
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-	<!-- release with: export GPG_TTY=$(tty); mvn clean deploy -P release-sign-artifacts -->
+    <!-- release with: export GPG_TTY=$(tty); mvn clean deploy -P release-sign-artifacts -->
     <profiles>
         <profile>
             <id>release-sign-artifacts</id>
@@ -83,8 +86,8 @@ limitations under the License.
             <properties>
                 <!-- original gpg key from 2011-05-28 -->
                 <gpg.keyname>2C8DF6EC</gpg.keyname>
-				<!-- 2021 rsa4096 key-->
-				<!-- <gpg.keyname>53BE126D</gpg.keyname> -->
+                <!-- 2021 rsa4096 key-->
+                <!-- <gpg.keyname>53BE126D</gpg.keyname> -->
                 <!-- <gpg.keyname>Uriel Chemouni (dev) <uchemouni@gmail.com></gpg.keyname> -->
             </properties>
             <build>
@@ -107,10 +110,10 @@ limitations under the License.
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-						<version>3.2.0</version>
-						<configuration>
-                          <source>8</source>
-                		</configuration>
+                        <version>3.2.0</version>
+                        <configuration>
+                            <source>8</source>
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
@@ -224,7 +227,7 @@ limitations under the License.
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Import-Package>
-                        	org.objectweb.asm;version="[8.0,10)",*
+                            org.objectweb.asm;version="[8.0,10)",*
                         </Import-Package>
                         <Export-Package>
                             net.minidev.asm, net.minidev.asm.ex
@@ -236,17 +239,17 @@ limitations under the License.
     </build>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter-api</artifactId>
-                <version>5.8.2</version>
-                <scope>test</scope>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
-            <dependency>
-                <groupId>org.ow2.asm</groupId>
-                <artifactId>asm</artifactId>
-                <version>9.3</version>
-            </dependency>
-        </dependencies>    
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>9.3</version>
+        </dependency>
+    </dependencies>
 </project>

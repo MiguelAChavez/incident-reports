@@ -1,6 +1,6 @@
-package com.utn.report.incidentreport.Services.Interfaces;
+package com.utn.report.incidentreport.services.interfaces;
 
-import com.utn.report.incidentreport.Entity.Person;
+import com.utn.report.incidentreport.entity.Person;
 
 import java.util.List;
 import java.util.Optional;

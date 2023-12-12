@@ -20,33 +20,34 @@
 
 <!-- $Rev: 561276 $ $Date: 2007-07-31 05:01:46 -0400 (Tue, 31 Jul 2007) $ -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
-    
+
     <parent>
         <groupId>org.apache.geronimo.genesis.config</groupId>
         <artifactId>config</artifactId>
         <version>1.2</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    
+
     <artifactId>project-config</artifactId>
     <name>Genesis Configuration :: Project</name>
     <packaging>pom</packaging>
-    
+
     <description>
         Genesis project-config provides the common project configuration shared
         by all Apache Geronimo projects.
     </description>
-    
+
     <url>http://geronimo.apache.org</url>
-    
+
     <organization>
         <name>Apache Software Foundation</name>
         <url>http://www.apache.org</url>
     </organization>
-    
+
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -54,7 +55,7 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-    
+
     <!--
     NOTE: Project pom should define something like:
     
@@ -64,7 +65,7 @@
         <url>https://svn.apache.org/viewvc/geronimo</url>
     </scm>
     -->
-    
+
     <mailingLists>
         <mailingList>
             <name>Geronimo User List</name>
@@ -76,7 +77,7 @@
                 <otherArchive>http://www.nabble.com/Apache-Geronimo---Users-f135.html</otherArchive>
             </otherArchives>
         </mailingList>
-        
+
         <mailingList>
             <name>Geronimo Developer List</name>
             <subscribe>dev-subscribe@geronimo.apache.org</subscribe>
@@ -87,7 +88,7 @@
                 <otherArchive>http://www.nabble.com/Apache-Geronimo---Dev-f136.html</otherArchive>
             </otherArchives>
         </mailingList>
-        
+
         <mailingList>
             <name>Source Control List</name>
             <subscribe>scm-subscribe@geronimo.apache.org</subscribe>
@@ -95,9 +96,9 @@
             <post>scm@geronimo.apache.org</post>
             <archive>http://mail-archives.apache.org/mod_mbox/geronimo-scm</archive>
         </mailingList>
-        
+
         <!-- ASF-wide lists -->
-        
+
         <mailingList>
             <name>Apache Announce List</name>
             <subscribe>announce-subscribe@apache.org</subscribe>
@@ -106,62 +107,62 @@
             <archive>http://mail-archives.apache.org/mod_mbox/www-announce/</archive>
         </mailingList>
     </mailingLists>
-    
+
     <issueManagement>
         <system>jira</system>
         <url>http://issues.apache.org/jira/browse/GERONIMO</url>
     </issueManagement>
-    
+
     <ciManagement>
         <system>continuum</system>
         <notifiers>
             <notifier>
                 <type>mail</type>
-                <sendOnError />
-                <sendOnFailure />
+                <sendOnError/>
+                <sendOnFailure/>
                 <address>dev@geronimo.apache.org</address>
             </notifier>
         </notifiers>
     </ciManagement>
-    
+
     <dependencyManagement>
         <dependencies>
-            
+
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>3.8.1</version>
             </dependency>
-            
+
             <dependency>
                 <groupId>org.apache.geronimo.genesis.config</groupId>
                 <artifactId>logging-config</artifactId>
                 <version>1.2</version>
             </dependency>
-            
+
         </dependencies>
     </dependencyManagement>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.apache.geronimo.genesis.config</groupId>
             <artifactId>logging-config</artifactId>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <defaultGoal>install</defaultGoal>
-        
+
         <sourceDirectory>${pom.basedir}/src/main/java</sourceDirectory>
         <testSourceDirectory>${pom.basedir}/src/test/java</testSourceDirectory>
-        
+
         <resources>
             <resource>
                 <directory>${pom.basedir}/src/main/resources</directory>
@@ -172,7 +173,7 @@
             <testResource>
                 <directory>${pom.basedir}/src/test/resources</directory>
             </testResource>
-            
+
             <!--
             TODO: Drop this... its not got much meaning
             -->
@@ -180,21 +181,21 @@
                 <directory>${pom.basedir}/src/test/data</directory>
             </testResource>
         </testResources>
-        
+
         <extensions>
             <extension>
                 <groupId>org.apache.geronimo.genesis.config</groupId>
                 <artifactId>checkstyle-config</artifactId>
                 <version>1.2</version>
             </extension>
-            
+
             <extension>
                 <groupId>org.apache.maven.wagon</groupId>
                 <artifactId>wagon-ssh</artifactId>
                 <version>1.0-beta-2</version>
             </extension>
         </extensions>
-            
+
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -203,9 +204,11 @@
                     <version>2.2</version>
                     <configuration>
                         <forkMode>once</forkMode>
-                        <argLine>-enableassertions -Dgeronimo.bootstrap.logging.enabled=false -Dlog4j.configuration=org/apache/geronimo/test-log4j.properties</argLine>
+                        <argLine>-enableassertions -Dgeronimo.bootstrap.logging.enabled=false
+                            -Dlog4j.configuration=org/apache/geronimo/test-log4j.properties
+                        </argLine>
                         <workingDirectory>${project.build.directory}</workingDirectory>
-                        
+
                         <!-- Override the default, do not accept Test* as test classes -->
                         <excludes>
                             <exclude>**/Abstract*.java</exclude>
@@ -216,25 +219,25 @@
                         </includes>
                     </configuration>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-clean-plugin</artifactId>
                     <version>2.1</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-one-plugin</artifactId>
                     <version>1.0</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
                     <version>1.1</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
@@ -243,43 +246,43 @@
                         <tarLongFileMode>gnu</tarLongFileMode>
                     </configuration>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>2.1</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-clover-plugin</artifactId>
                     <version>2.3</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
                     <version>2.0-beta-4</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-one-plugin</artifactId>
                     <version>1.0</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>2.1</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-rar-plugin</artifactId>
                     <version>2.1</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
@@ -296,54 +299,54 @@
                         </dependency>
                     </dependencies>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-idea-plugin</artifactId>
                     <version>2.0</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-eclipse-plugin</artifactId>
                     <version>2.2</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>jspc-maven-plugin</artifactId>
                     <version>1.4.5</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>groovy-maven-plugin</artifactId>
                     <version>1.0-alpha-2</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
                     <version>1.0</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
                     <version>2.0-alpha-1</version>
                 </plugin>
-                
+
                 <!--
                 NOTE: Using constant versions here instead of ${pom.version}
                       so that the release plugin can update the version for us.
                 -->
-                
+
                 <plugin>
                     <groupId>org.apache.geronimo.genesis.plugins</groupId>
                     <artifactId>tools-maven-plugin</artifactId>
                     <version>1.2</version>
                 </plugin>
-                
+
                 <plugin>
                     <groupId>org.apache.geronimo.genesis.plugins</groupId>
                     <artifactId>maven-maven-plugin</artifactId>
@@ -351,7 +354,7 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-        
+
         <plugins>
             <!--
             NOTE: Project pom should define:
@@ -382,9 +385,9 @@
                 </configuration>
             </plugin>
             -->
-         </plugins>
+        </plugins>
     </build>
-    
+
     <repositories>
         <repository>
             <id>apache-snapshots</id>
@@ -400,7 +403,7 @@
                 <enabled>false</enabled>
             </releases>
         </repository>
-        
+
         <repository>
             <id>apache-incubator</id>
             <name>Apache Incubator Repository</name>
@@ -413,7 +416,7 @@
                 <enabled>true</enabled>
             </releases>
         </repository>
-        
+
         <repository>
             <id>codehaus-snapshots</id>
             <name>Codehaus Snapshots Repository</name>
@@ -429,7 +432,7 @@
             </releases>
         </repository>
     </repositories>
-    
+
     <pluginRepositories>
         <pluginRepository>
             <id>apache-snapshots</id>
@@ -445,7 +448,7 @@
                 <enabled>false</enabled>
             </releases>
         </pluginRepository>
-        
+
         <pluginRepository>
             <id>codehaus-snapshots</id>
             <name>Codehaus Snapshots Repository</name>
@@ -461,16 +464,16 @@
             </releases>
         </pluginRepository>
     </pluginRepositories>
-    
+
     <profiles>
         <profile>
             <id>default</id>
-            
+
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
-        
+
         <profile>
             <id>tools</id>
 
@@ -489,7 +492,7 @@
             </build>
         </profile>
     </profiles>
-    
+
     <reporting>
         <plugins>
             <plugin>
@@ -497,7 +500,7 @@
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>2.0</version>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -520,12 +523,12 @@
                         <link>http://java.sun.com/j2se/1.5.0/docs/api/</link>
                         <link>http://java.sun.com/j2se/1.4.2/docs/api/</link>
                         <link>http://java.sun.com/j2se/1.3/docs/api/</link>
-                        
+
                         <!-- JavaEE -->
                         <link>http://java.sun.com/javaee/5/docs/api/</link>
                         <link>http://java.sun.com/j2ee/1.4/docs/api/</link>
                         <link>http://java.sun.com/j2ee/sdk_1.3/techdocs/api/</link>
-                        
+
                         <!-- Libraries -->
                         <link>http://jakarta.apache.org/commons/collections/apidocs</link>
                         <link>http://jakarta.apache.org/commons/logging/apidocs/</link>
@@ -536,25 +539,25 @@
                     </links>
                 </configuration>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>2.0</version>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>2.1</version>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>2.0.1</version>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>

@@ -71,7 +71,8 @@
     </mailingLists>
 
     <properties>
-        <project.build.commonResourcesDirectory>${project.build.directory}/common-resources</project.build.commonResourcesDirectory>
+        <project.build.commonResourcesDirectory>${project.build.directory}/common-resources
+        </project.build.commonResourcesDirectory>
         <legal.doc.source>${project.build.commonResourcesDirectory}/legal</legal.doc.source>
         <copyright.exclude>${project.build.commonResourcesDirectory}/config/copyright-exclude</copyright.exclude>
         <copyright.ignoreyear>false</copyright.ignoreyear>
@@ -216,7 +217,8 @@
                             </manifest>
                             <manifestEntries>
                                 <Specification-Title>Jakarta XML Binding</Specification-Title>
-                                <Specification-Version>${xml.bind-api.majorVersion}.${xml.bind-api.minorVersion}</Specification-Version>
+                                <Specification-Version>${xml.bind-api.majorVersion}.${xml.bind-api.minorVersion}
+                                </Specification-Version>
                                 <Specification-Vendor>Eclipse Foundation</Specification-Vendor>
                                 <Implementation-Title>Eclipse Implementation of JAXB</Implementation-Title>
                                 <Implementation-Version>${project.version} - ${buildNumber}</Implementation-Version>
@@ -241,7 +243,8 @@
                             </manifest>
                             <manifestEntries>
                                 <Specification-Title>Jakarta XML Binding</Specification-Title>
-                                <Specification-Version>${xml.bind-api.majorVersion}.${xml.bind-api.minorVersion}</Specification-Version>
+                                <Specification-Version>${xml.bind-api.majorVersion}.${xml.bind-api.minorVersion}
+                                </Specification-Version>
                                 <Specification-Vendor>Eclipse Foundation</Specification-Vendor>
                                 <Implementation-Title>Eclipse Implementation of JAXB</Implementation-Title>
                                 <Implementation-Version>${project.version} - ${buildNumber}</Implementation-Version>
@@ -534,7 +537,8 @@
                                 </manifest>
                                 <manifestEntries>
                                     <Specification-Title>Jakarta XML Binding</Specification-Title>
-                                    <Specification-Version>${xml.bind-api.majorVersion}.${xml.bind-api.minorVersion}</Specification-Version>
+                                    <Specification-Version>${xml.bind-api.majorVersion}.${xml.bind-api.minorVersion}
+                                    </Specification-Version>
                                     <Specification-Vendor>Eclipse Foundation</Specification-Vendor>
                                     <Implementation-Title>Eclipse Implementation of JAXB</Implementation-Title>
                                     <Implementation-Version>${project.version} - ${buildNumber}</Implementation-Version>

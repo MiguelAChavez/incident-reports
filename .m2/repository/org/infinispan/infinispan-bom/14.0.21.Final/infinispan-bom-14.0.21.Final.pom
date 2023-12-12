@@ -503,11 +503,11 @@
                 <!-- compile-only dependency -->
                 <scope>provided</scope>
             </dependency>
-           <dependency>
-              <groupId>org.infinispan</groupId>
-              <artifactId>infinispan-cloudevents-integration</artifactId>
-              <version>${version.infinispan}</version>
-           </dependency>
+            <dependency>
+                <groupId>org.infinispan</groupId>
+                <artifactId>infinispan-cloudevents-integration</artifactId>
+                <version>${version.infinispan}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -515,7 +515,7 @@
         <profile>
             <id>community-release</id>
             <activation>
-               <activeByDefault>true</activeByDefault>
+                <activeByDefault>true</activeByDefault>
             </activation>
             <dependencyManagement>
                 <dependencies>

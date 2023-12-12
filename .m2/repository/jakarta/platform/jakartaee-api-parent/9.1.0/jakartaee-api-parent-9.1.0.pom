@@ -17,7 +17,8 @@
 
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.eclipse.ee4j</groupId>
@@ -40,7 +41,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jakartaee.version>9.0.0</jakartaee.version>
-        <extra.excludes />
+        <extra.excludes/>
 
         <!-- Web Profile -->
         <jakarta.servlet-api.version>5.0.0</jakarta.servlet-api.version>
@@ -266,7 +267,7 @@
                         <windowtitle>${project.name}</windowtitle>
                         <header><![CDATA[<br>${project.name} v${project.version}]]></header>
                         <bottom>
-<![CDATA[
+                            <![CDATA[
 <p align="left">Copyright &#169; 2018,2020 Eclipse Foundation.<br>Use is subject to
 <a href="{@docRoot}/doc-files/speclicense.html" target="_top">license terms</a>.]]>
                         </bottom>

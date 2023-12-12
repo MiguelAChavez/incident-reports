@@ -1,14 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.vaadin.external.google</groupId>
     <artifactId>android-json</artifactId>
     <version>0.0.20131108.vaadin1</version>
     <name>JSON library from Android SDK</name>
     <description>
-      JSON (JavaScript Object Notation) is a lightweight data-interchange format.
-      This is the org.json compatible Android implementation extracted from the Android SDK
-    </description>
+          JSON (JavaScript Object Notation) is a lightweight data-interchange format.
+        This is the org.json compatible Android implementation extracted from the Android SDK
+         
+    </description>
     <url>http://developer.android.com/sdk</url>
     <licenses>
         <license>
