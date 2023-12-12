@@ -1,8 +1,6 @@
-package com.utn.report.incidentreport.Entity;
+package com.utn.report.incidentreport.models;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
 import lombok.*;
 
 @Entity
@@ -15,8 +13,6 @@ import lombok.*;
 public class Technical extends Person {
 
     @Column(nullable = false, name = "matriculation")
-    @NotBlank(message = "Matriculation is required")
-    @Pattern(regexp = "^[0-9]{4}-[a-zA-Z]{2}$", message = "Matriculation must be in format 0000-AA")
     private String matriculation;
 
     /*@OneToOne(cascade = CascadeType.ALL)

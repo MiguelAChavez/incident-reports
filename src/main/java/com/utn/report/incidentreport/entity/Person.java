@@ -1,10 +1,9 @@
-package com.utn.report.incidentreport.Entity;
+package com.utn.report.incidentreport.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
-
 import java.io.Serializable;
 
 @AllArgsConstructor
@@ -31,11 +30,12 @@ public class Person implements Serializable {
     @Column(nullable = false, name = "dni")
     protected int dni;
 
+
     public Person(String name, String lastName, int dni) {
         this.name = name;
         this.lastName = lastName;
         this.dni = dni;
-        System.out.println("Person constructor");
     }
+
 
 }
