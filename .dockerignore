@@ -2,6 +2,7 @@
 *.iml
 *.iws
 target/
+.git
 
 !src/
 !pom.xml/

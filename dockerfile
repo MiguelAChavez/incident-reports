@@ -1,4 +1,4 @@
-FROM  openjdk:17-jdk-alpine as builder
+FROM  openjdk:17-jdk-alpine AS builder
 RUN apk add --no-cache maven
 WORKDIR /app
 COPY pom.xml .
